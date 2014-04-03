@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Untitled Document</title>
+        <script src="js/underscore-min.js"></script>
+		<script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/backbone-min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/handlebars-v1.3.0.js"></script>
+        <script src="js/templateLoader.js"></script>
+        <script src="views/views.js"></script>
+        <script src="routes/routes.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/welcome.css">
+    </head>
+    
+    <body>
+    	<header></header>
+        <div id="body"></div>
+        <footer></footer>
+    </body>
+    <script>
+    	var welcome = new WelcomeView();
+        // Start Backbone history
+        Backbone.history.start();
+    </script>
+</html>

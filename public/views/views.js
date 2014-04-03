@@ -1,9 +1,9 @@
 var WelcomeView = Backbone.Model.extend({
 	el: '#body',
 	events: {
+		'click #logo-wrap': 'navHome'
 	},
 	render: function(){
-		console.log(templates.welcomeTemplate);
 		if(templates.welcomeTemplate != undefined){
 			$(this.el).html(Handlebars.compile(templates.welcomeTemplate));
 		}
@@ -18,5 +18,9 @@ var WelcomeView = Backbone.Model.extend({
 				}
 			);
 		}
+	},
+	navHome: function(){
+		console.log('test');
+		$('#logo-wrap').prepend(Handlebars.compile(templates.pulseEffectTemplate));
 	}
 });

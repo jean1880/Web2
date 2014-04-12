@@ -1,6 +1,24 @@
 .white-header{
-	color: white
+    color: white
 }
 .bold{
-	font-weight: bold;
+    font-weight: bold;
+}
+
+.body{
+    margin-top: 55px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1px;
+    padding-bottom: 1em;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#body{
+    background-image: url(../img/background.jpg);
+    margin-top: -50px;
+    margin-bottom: -10px;
+    padding-bottom: 10px;
+    padding-top: 50px;
 }

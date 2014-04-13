@@ -24,29 +24,24 @@ var incrementProgess = function(){
 $.get('templates/welcomeTemplate.html', function(incomingTemplate) {
     templates.welcomeTemplate = incomingTemplate;
     incrementProgess();
-    welcome.progressLoader();
-});
-
-$.get('templates/pulseEffectTemplate.html', function(incomingTemplate) {
-    templates.pulseEffectTemplate = incomingTemplate;
-    incrementProgess();
-    welcome.progressLoader();
 });
 
 $.get('templates/homeTemplate.html', function(incomingTemplate) {
     templates.homeTemplate = incomingTemplate;
     incrementProgess();
-    welcome.progressLoader();
 });
 
 $.get('templates/headerTemplate.html', function(incomingTemplate) {
     templates.headerTemplate = incomingTemplate;
     incrementProgess();
-    welcome.progressLoader();
 });
 
 $.get('templates/projectsTemplate.html', function(incomingTemplate) {
     templates.projectsTemplate = incomingTemplate;
     incrementProgess();
-    welcome.progressLoader();
+});
+
+$.get('templates/contactMeTemplate.html', function(incomingTemplate) {
+    templates.projectsTemplate = incomingTemplate;
+    incrementProgess();
 });

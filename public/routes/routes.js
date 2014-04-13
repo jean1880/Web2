@@ -3,6 +3,7 @@ var AppRouter = Backbone.Router.extend({
 		'':				'welcomeRoute',
 		'welcome':		'welcomeRoute',
         'home':         'homeRoute',
+        'contactMe':    'contactMe',
         '*var':         'notFoundRoute'
 	}
 });
@@ -15,4 +16,8 @@ app_router.on('route:welcomeRoute', function(){
 
 app_router.on('route:homeRoute', function(){
 	home.render();
+})
+
+app_router.on('route:contactMe', function(){
+	contactMe.render();
 })

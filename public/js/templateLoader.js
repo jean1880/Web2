@@ -1,47 +1,89 @@
-var templates           = new Object();
+/**
+ * Loads all the templates to be used by the MVC
+ * @class js.templateLoader.js
+ */
+var templates = new Object();
 
-var templateCount       = 5;
-var progressMin         = 0;
-var progressMax         = 100;
-var progressIterator    = Math.floor(progressMax / templateCount);
+var templateCount = 7;
+var PROGRESSMIN = 0;
+var PROGRESSMAX = 100;
+var progressIterator = Math.floor(PROGRESSMAX / templateCount);
+var count;
 
-var progress            = progressMin;
+var progress = PROGRESSMIN;
 
-var incrementProgess = function(){
-    if (progress < (progressMax - progressIterator - 1)) {
+/**
+ * Increments progress by, if progresscompletes fade out the progresss bar
+ * @method  incrementProgress
+ */
+var incrementProgress = function () {
+    count++;
+    if (count == templateCount) {
         progress += progressIterator;
     } else {
-        progress = progressMax;
+        progress = PROGRESSMAX;
     }
-    $('.progress-bar').attr('aria-valuenow', progress).css('width', progress+'%');
-    if (progress == progressMax) {
-        setTimeout(function() {
+    $('.progress-bar').attr('aria-valuenow', progress).css('width', progress + '%');
+    if (progress == PROGRESSMAX) {
+        setTimeout(function () {
             $('.progress').addClass('fadeOutDown animated');
         }, 500)
     }
-}
+};
 
-$.get('templates/welcomeTemplate.html', function(incomingTemplate) {
+/**
+ * Fetch welcome temmplate and save into template object
+ */
+$.get('templates/welcomeTemplate.html', function (incomingTemplate) {
     templates.welcomeTemplate = incomingTemplate;
-    incrementProgess();
+    incrementProgress();
 });
 
-$.get('templates/homeTemplate.html', function(incomingTemplate) {
+/**
+ * Fetch welcome temmplate and save into template object
+ */
+$.get('templates/projectsTemplate.html', function (incomingTemplate) {
+    templates.projectsTemplate = incomingTemplate;
+    incrementProgress();
+});
+
+
+/**
+ * Fetch resume temmplate and save into template object
+ */
+$.get('templates/resumeTemplate.html', function (incomingTemplate) {
+    templates.resumeTemplate = incomingTemplate;
+    incrementProgress();
+});
+
+/**
+ * Fetch home temmplate and save into template object
+ */
+$.get('templates/homeTemplate.html', function (incomingTemplate) {
     templates.homeTemplate = incomingTemplate;
-    incrementProgess();
+    incrementProgress();
 });
 
-$.get('templates/headerTemplate.html', function(incomingTemplate) {
+/**
+ * Fetch header temmplate and save into template object
+ */
+$.get('templates/headerTemplate.html', function (incomingTemplate) {
     templates.headerTemplate = incomingTemplate;
-    incrementProgess();
+    incrementProgress();
 });
 
-$.get('templates/projectsTemplate.html', function(incomingTemplate) {
+/**
+ * Fetch projects temmplate and save into template object
+ */
+$.get('templates/projectsTemplate.html', function (incomingTemplate) {
     templates.projectsTemplate = incomingTemplate;
-    incrementProgess();
+    incrementProgress();
 });
 
-$.get('templates/contactMeTemplate.html', function(incomingTemplate) {
-    templates.projectsTemplate = incomingTemplate;
-    incrementProgess();
+/**
+ * Fetch contact me temmplate and save into template object
+ */
+$.get('templates/contactMeTemplate.html', function (incomingTemplate) {
+    templates.contactMeTemplate = incomingTemplate;
+    incrementProgress();
 });

@@ -1,36 +1,51 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jean-Luc Desroches</title>
-        <script src="js/underscore-min.js"></script>
-        <script src="js/jquery-2.1.0.min.js"></script>
-        <script src="js/backbone-min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/handlebars-v1.3.0.js"></script>
-        <script src="js/templateLoader.js"></script>
-        <script src="views/views.js"></script>
-        <script src="routes/routes.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="css/animate.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/welcome.css">
-        <!--[if gte IE 9]>
-          <style type="text/css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jean-Luc Desroches</title>
+    <link rel="icon" href="img/logo_address.png" type="image/png">
+    <script src="js/underscore-min.js"></script>
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/backbone-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars-v1.3.0.js"></script>
+    <script src="js/templateLoader.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/welcome.css">
+    <!--[if gte IE 9]>
+          <style type="text/css"> 
             .gradient {
                filter: none;
             }
           </style>
         <![endif]-->
-    </head>
+</head>
 
-    <body>
-        <header id="header"></header>
-        <div class="container-fluid" id="body"></div>
-        <footer></footer>
-    </body>
+<body>
+    <header id="header"></header>
+    <div class="container-fluid">
+        <div class="row" id="body"></div>
+        <div id="right-panel"></div>
+    </div>
+    <footer></footer>
+
+    <script src="views/HeaderView.js"></script>
+    <script src="views/ContactView.js"></script>
+    <script src="views/HomeView.js"></script>
+    <script src="views/WelcomeView.js"></script>
+    <script src="views/ResumeView.js"></script>
+    <script src="views/ProjectView.js"></script>
     <script src="js/initialize.js"></script>
+    <script src="routes/routes.js"></script>
+</body>
+
+
 </html>
